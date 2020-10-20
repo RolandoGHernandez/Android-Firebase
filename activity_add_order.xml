@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddOrderActivity">
+
+    <EditText
+        android:id="@+id/nameTextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="134dp"
+        android:layout_marginLeft="134dp"
+        android:layout_marginTop="29dp"
+        android:editable="true"
+        android:hint="Enter Name Here"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/teaOptionGroup"
+        android:layout_width="193dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bobaText">
+
+        <RadioButton
+            android:id="@+id/blackTeaButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Black Tea" />
+
+        <RadioButton
+            android:id="@+id/greenTeaButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Green Tea" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/milkOptionGroup"
+        android:layout_width="182dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toEndOf="@+id/teaOptionGroup"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextButton">
+
+        <RadioButton
+            android:id="@+id/milkButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Milk" />
+
+        <RadioButton
+            android:id="@+id/noMilkButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Milk" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/bobaOptionGroup"
+        android:layout_width="193dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teaOptionGroup">
+
+        <RadioButton
+            android:id="@+id/bobaButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Boba" />
+
+        <RadioButton
+            android:id="@+id/noBobaButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Boba" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/finishButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="addOrder"
+        android:text="Add Order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toEndOf="@+id/sauceOptionGroup"
+        app:layout_constraintTop_toBottomOf="@+id/spiceOptionGroup" />
+
+    <RadioGroup
+        android:id="@+id/sizeOptionGroup"
+        android:layout_width="193dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chickenText">
+
+        <RadioButton
+            android:id="@+id/smallButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Small" />
+
+        <RadioButton
+            android:id="@+id/mediumButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medium" />
+
+        <RadioButton
+            android:id="@+id/largeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Large" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/spiceOptionGroup"
+        android:layout_width="177dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="126dp"
+        app:layout_constraintStart_toEndOf="@+id/sizeOptionGroup"
+        app:layout_constraintTop_toBottomOf="@+id/milkOptionGroup">
+
+        <RadioButton
+            android:id="@+id/mildButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mild" />
+
+        <RadioButton
+            android:id="@+id/mediumSpiceButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medium" />
+
+        <RadioButton
+            android:id="@+id/spicyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Spicy" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/sauceOptionGroup"
+        android:layout_width="237dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sizeOptionGroup">
+
+        <RadioButton
+            android:id="@+id/sweetAndSourButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sweet and Sour" />
+
+        <RadioButton
+            android:id="@+id/ranchButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ranch" />
+
+        <RadioButton
+            android:id="@+id/noneButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="None" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/bobaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="82dp"
+        android:layout_marginEnd="341dp"
+        android:layout_marginRight="341dp"
+        android:text="Boba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/chickenText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="269dp"
+        android:layout_marginRight="269dp"
+        android:text="Popcorn Chicken"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bobaOptionGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

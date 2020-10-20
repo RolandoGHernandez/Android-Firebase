@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateBobaOrder">
+
+    <RadioGroup
+        android:id="@+id/teaOptionGroup"
+        android:layout_width="144dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="265dp"
+        android:layout_marginRight="265dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextButton">
+
+        <RadioButton
+            android:id="@+id/blackTeaButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Black Tea" />
+
+        <RadioButton
+            android:id="@+id/greenTeaButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Green Tea" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/milkOptionGroup"
+        android:layout_width="150dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="265dp"
+        android:layout_marginRight="265dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teaOptionGroup">
+
+        <RadioButton
+            android:id="@+id/milkButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Milk" />
+
+        <RadioButton
+            android:id="@+id/noMilkButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Milk" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/bobaOptionGroup"
+        android:layout_width="161dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="265dp"
+        android:layout_marginRight="265dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/milkOptionGroup">
+
+        <RadioButton
+            android:id="@+id/bobaButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Boba" />
+
+        <RadioButton
+            android:id="@+id/noBobaButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Boba" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginLeft="152dp"
+        android:layout_marginEnd="171dp"
+        android:layout_marginRight="171dp"
+        android:layout_marginBottom="100dp"
+        android:onClick="update"
+        android:text="Update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewInstructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="308dp"
+        android:layout_marginRight="308dp"
+        android:text="You are editing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <EditText
+        android:id="@+id/nameTextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="86dp"
+        tools:layout_editor_absoluteY="46dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
